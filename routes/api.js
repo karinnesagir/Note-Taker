@@ -33,15 +33,14 @@ router.delete('/notes/:id', (req, res) => {
 
   fs.readFile("db/db.json", (err, data) => {
     if(err) throw err
-    notes = JSON.parse(data);
-  })
- 
-  const newList = notes.filter(item => item.id !== req.params.id);
+    deleteNote = JSON.parse(data);
+    const newList = deleteNote.filter(item => item.id !== req.params.id);
 
   fs.writeFile("db/db.json", JSON.stringify(newList), (err) => {
     if(err) throw err
     res.json(newList);
   });
+  })
 });
 
 module.exports = router;
