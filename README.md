@@ -5,18 +5,9 @@ Express.js Challenge: Note Taker
 
 This application can be used to write, save, and delete notes. This application uses an Express.js back end and will save and retrieve note data from a JSON file.
 
-This application has a db.json file on the back end that is used to store and retrieve notes using the fs module.
-The following HTML routes are included:
-    GET /notes returns the notes.html file.
-    GET * returns the index.html file.
-The following API routes are created:
-    GET /api/notes reads the db.json file and returns all saved notes as JSON.
-    POST /api/notes receives a new note to save on the request body, adds it to the db.json file, and returns the new note to the client
-Each note has a unique id when it's saved, using the uniqid npm package.
+This application has a db.json file on the back end that is used to store and retrieve notes using the fs module. Each note has a unique id when it's saved, using the uniqid npm package.
 
-This application has a delete request functionality.
-DELETE /api/notes/:id receives a query parameter containing the id of a note to delete. 
-All the notes are read from the db.json file, the note with the given id property is removed, and the notes are rewritten to the db.json file.
+This application has a delete request functionality. All the notes are read from the db.json file, the note with the given id property is removed, and the notes are rewritten to the db.json file.
 
 ### User Story
 
@@ -46,28 +37,37 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
+- [Routes](#routes)
 - [License](#license)
 - [Features](#Features)
 
-## Installation
-
-The applications environment can be invoked through the command line using the following command:
-
-```
-node server.js
-```
-
 ## Usage
 
-Use the intergrated terminal to build a team and add as many members as needed.
+1. Open the website using the following link:
+<!-- [Live website](https://karinnesagir.github.io/Code-Quiz/) -->
+
+2. Click the 'Get Started' button.
+
+3. Enter your note's title and text into the right-hand portion of the screen.
+
+4. Click the Save icon in the top right of the screen.
 
 The following images show the web application's appearance and functionality:
 
 ![Application appearance](./assets/images/appearance.jpg)
 
-![Application finctionality](./assets/images/appearance2.jpg)
+![Application functionality](./assets/images/appearance2.jpg)
+
+## Routes 
+
+The following HTML routes are included:
+* GET /notes returns the notes.html file.
+* GET * returns the index.html file.
+
+The following API routes are created:
+* GET /api/notes reads the db.json file and returns all saved notes as JSON.
+* POST /api/notes receives a new note to save on the request body, adds it to the db.json file, and returns the new note to the client
 
 ## License
 
@@ -82,3 +82,5 @@ This project is licensed under the MIT license. For more information on the MIT 
 5. Bootstrap
 6. Inquirer
 7. JSON
+8. Heroku
+9. Insomnia
