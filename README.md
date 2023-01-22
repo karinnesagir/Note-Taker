@@ -45,7 +45,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Usage
 
 1. Open the website using the following link:
-<!-- [Live website](https://karinnesagir.github.io/Code-Quiz/) -->
+
+    [Live website](https://note-taker23.herokuapp.com/)
 
 2. Click the 'Get Started' button.
 
